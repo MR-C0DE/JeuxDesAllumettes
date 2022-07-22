@@ -3,6 +3,8 @@ let checkbox = document.querySelector('#horns');
 let player1 = document.querySelector('.player1');
 let player2 = document.querySelector('.player2');
 
+
+
 checkbox.addEventListener('click', () => {
     if (checkbox.checked) {
         player2.disabled = true;
@@ -29,11 +31,14 @@ button.addEventListener('click', () => {
     if (verification(player1) && verification(player2)) {
         let date = new Date(Date.now() + 86400000); //86400000ms = 1 jour
         date = date.toUTCString();
-
+        document.cookie = 'Player1<>Player2; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC';
         //Crée ou met à jour un cookie 'user'
-        document.cookie = 'user=Pierre; path=/; expires=' + date;
+        document.cookie = player1.value + '<>' + player2.value + '; path=/; expires=' + date;
+        console.log(document.cookie);
 
-        //Supprime le cookie en lui passant une date d'expiration passée
-        document.cookie = 'user=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+        let meta = '<meta http-equiv="Refresh" content="0; url=page/start.html" />';
+        document.querySelector('head').innerHTML += meta;
+
+
     }
 });
