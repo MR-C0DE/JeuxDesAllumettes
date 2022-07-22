@@ -1,0 +1,59 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
+    background-color: rgb(255, 169, 78);
+}
+
+body>* {
+    padding: 0 1em;
+}
+
+
+/*L'en-tête de la page*/
+
+.wrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    background-color: #00a15e;
+    color: #fff;
+    padding: 2rem 1rem;
+    line-height: 4rem;
+    box-shadow: 2px 4px 8px 0px rgb(219, 219, 219);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+/*main*/
+
+main {
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #99a100;
+    color: #fff;
+    font-size: 1em;
+    padding: 2rem 0;
+    text-align: center;
+}
