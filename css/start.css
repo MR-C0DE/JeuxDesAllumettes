@@ -12,13 +12,15 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.4rem;
     background-color: rgb(255, 247, 231);
+    transition: all 0.8s;
 }
 
 body>* {
     padding: 0 1em;
 }
 
-header {
+header,
+footer {
     background: linear-gradient(rgb(255, 191, 0), rgb(255, 133, 2));
     padding: 2.5rem 3rem;
     box-shadow: 1px 1px 2px #ddd;
@@ -34,14 +36,83 @@ header h1 {
     line-height: 3rem;
 }
 
+.player {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.player h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: calibri;
+}
+
+.player span {
+    color: brown;
+}
+
 .allumettes {
     background-color: #fff;
-    max-width: 60rem;
+    max-width: 70rem;
     margin: 2rem auto;
     text-align: center;
     padding: 2rem;
+    border: 10px double rgb(255, 133, 2);
+    box-shadow: 5px 5px 5px rgb(164, 164, 164);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.allumettes .div {
+    /*background-color: rgb(255, 237, 190);*/
+    width: 2rem;
+    margin: .2rem;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .allumettes img {
-    width: 3%;
+    width: 50%;
+    margin: 3px 5px;
+}
+
+.game {
+    max-width: 70rem;
+    margin: 2rem auto;
+}
+
+.game h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.game h2 span {
+    color: rgb(255, 133, 2);
+    font-weight: 600;
+}
+
+.game .btn {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.game .btn button {
+    border: none;
+    padding: .7rem 2rem;
+    background-color: rgb(234, 0, 0);
+    color: aliceblue;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: .6rem;
+}
+
+.game .btn button:hover {
+    background-color: rgb(255, 44, 44);
+}
+
+.game .btn button:active {
+    background-color: rgb(193, 0, 0);
+}
+
+footer p {
+    color: #fff;
 }
